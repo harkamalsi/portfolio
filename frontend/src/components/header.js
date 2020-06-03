@@ -1,35 +1,16 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
-import { Container } from "./layoutComponents"
+import { Link } from 'gatsby';
+import React from 'react';
+import HeaderSVG from '../assets/Waihou.svg';
+import { HeaderContainer } from './layoutComponents';
 
-const Header = ({ siteTitle, className }) => (
-  <header className={className}>
-    <Container>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </Container>
-  </header>
-)
+const Header = () => (
+  <HeaderContainer>
+    <HeaderSVG />
+    <h1>
+      <Link to='/'>Harkamal</Link>
+    </h1>
+    <h2>Student & Full Stack Developer</h2>
+  </HeaderContainer>
+);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-const StyledHeader = styled(Header)`
-  color: var(--white);
-  background: var(--primary-color);
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-  h1 {
-    margin: 0;
-  }
-`
-
-export default StyledHeader
+export default Header;
