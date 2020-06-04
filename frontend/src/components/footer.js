@@ -7,6 +7,7 @@ import {
 } from './layoutComponents';
 import { InputName, TextInput } from '../elements/inputfield';
 import { ButtonPrimary } from '../elements/button';
+import { TextArea } from '../elements/textarea';
 
 const Footer = () => (
   <FooterContainer>
@@ -26,8 +27,8 @@ const Footer = () => (
         <TextInput></TextInput>
       </FormGridContainer>
       <FormGridContainer gridArea='subject'>
-        <InputName placeholder='Want to collaborate?'>Subject</InputName>
-        <TextInput></TextInput>
+        <InputName>Subject</InputName>
+        <TextInput placeholder='Want to collaborate?'></TextInput>
       </FormGridContainer>
       <FormGridContainer
         gridArea='message'
@@ -35,7 +36,7 @@ const Footer = () => (
         style={{ height: '150%' }}
       >
         <InputName>Message</InputName>
-        <TextInput></TextInput>
+        <TextArea rows='4' cols='50'></TextArea>
       </FormGridContainer>
       <FormGridContainer gridArea='submit' alignSelf='start'>
         <ButtonPrimary>Submit</ButtonPrimary>
