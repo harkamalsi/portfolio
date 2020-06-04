@@ -1,15 +1,16 @@
 import React from 'react';
 import {
   PassionContainer,
-  PassionScene,
+  PassionSceneContainer,
   PassionText,
 } from './layoutComponents';
+import PassionScene from '../assets/MyPassionScene.svg';
 
 const Passion = () => (
   <PassionContainer>
-    <PassionScene>
-      <h1>Scene</h1>
-    </PassionScene>
+    <PassionSceneContainer>
+      <PassionScene />
+    </PassionSceneContainer>
     <PassionText>
       <h1>My Passion</h1>
       <p>

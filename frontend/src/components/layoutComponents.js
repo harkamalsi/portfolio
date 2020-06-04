@@ -10,8 +10,8 @@ export const MainContainer = styled.div`
   letter-spacing: 0.024em;
 `;
 
-export const SpaceDown20 = styled.div`
-  padding-bottom: 20vh;
+export const SpaceDown = styled.div`
+  padding-bottom: ${(props) => props.space};
 `;
 
 export const HeaderContainer = styled.div`
@@ -28,48 +28,68 @@ export const HeaderContainer = styled.div`
     position: absolute;
     width: 404px;
     height: 125px;
-    margin: 0 10vw;
-    top: 15%;
-    font-size: 48px;
+    top: 17vh;
+    left: 9vw;
+    font-size: 50px;
     line-height: 24px;
-    font-family: DM Serif Display, serif;
+    font-family: DM Serif Display;
+    font-weight: 400;
+    letter-spacing: 0.05em;
   }
 
   h2 {
     position: absolute;
     width: 826px;
     height: 189px;
-    margin: 0 14vw;
-    top: 36.4%;
+    top: 38.5vh;
+    left: 14vw;
     font-size: 38px;
     line-height: 24px;
-    font-family: DM Serif Display, serif;
+    font-family: DM Serif Display;
+    font-weight: 400;
+    letter-spacing: 0.03em;
   }
 
-  svg {
-    width: 1600px;
-    height: 1200px;
-    transform: translate(0px, 100px);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+  h3 {
+    position: absolute;
+    top: 4vh;
+    left: 90.75vw;
+    font-size: 22px;
+    line-height: 24px;
+    font-family: DM Serif Display;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #ffbe00;
   }
+`;
+export const HeaderSvgContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  position: relative;
+  left: 40%;
+  bottom: 23%;
 `;
 
 export const PassionContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 75vh;
 `;
-export const PassionScene = styled.div``;
+export const PassionSceneContainer = styled.div`
+  grid-area: 2 / 1 / 6 / 6;
+`;
 export const PassionText = styled.div`
-  width: 500px;
-  height: 250px;
+  grid-area: 2 / 7 / 4 / 10;
 
   h1 {
-    font-family: DM Serif Display, serif;
+    font-family: Muli, sans-serif;
     font-style: normal;
     font-size: 38px;
     line-height: 24px;
+    margin-bottom: 1.25em;
   }
 
   p {
@@ -90,7 +110,7 @@ export const ProjectsContainer = styled.div`
     font-style: normal;
     font-size: 38px;
     line-height: 24px;
-    font-family: DM Serif Display;
+    font-family: Muli, sans-serif;
   }
 
   .col {
@@ -101,16 +121,18 @@ export const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  row-gap: 7vh;
+
+  /* For ProjectsContainer */
   align-content: space-between;
   justify-content: space-between;
-  row-gap: 10vh;
 `;
 export const Project = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-self: ${(props) => props.justifySelf || 'center'};
-  width: 505px;
+  width: 520px;
   height: 500px;
   background-color: 'gray';
 
@@ -120,15 +142,17 @@ export const Project = styled.div`
   }
 
   h2 {
-    font-family: DM Serif Display;
+    font-family: Muli, sans-serif;
     font-size: 28px;
     line-height: 24px;
+    font-weight: 500;
   }
 
   p {
     font-family: Inter, -apple-system, sans-serif;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #696969;
   }
 `;
 
@@ -142,7 +166,7 @@ export const FooterContainer = styled.div`
 
   h1 {
     grid-area: 2 / 2 / 3 / 4;
-    font-family: DM Serif Display, serif;
+    font-family: Muli, sans-serif;
     font-size: 38px;
     line-height: 24px;
     margin: 0;
@@ -157,7 +181,7 @@ export const FooterContainer = styled.div`
     margin: 0;
   }
 `;
-export const GridContainer = styled.div`
+export const FormContainer = styled.div`
   grid-area: 4 / 2 / 9 / 10;
 
   display: grid;
@@ -171,19 +195,23 @@ const formGridAreaDict = {
   subject: '2 / 1 / 3 / 5',
   message: '3 / 1 / 5 / 5',
   submit: '5 / 1 / 6 / 2',
+  socialMedia: '5 / 4 / 6 / 5',
 };
-export const FormGridContainer = styled.div`
+export const GridItemContainer = styled.div`
   grid-area: ${(props) => formGridAreaDict[props.gridArea] || 'auto'};
   align-self: ${(props) => props.alignSelf || 'auto'};
 `;
-export const HumansContainer = styled.div`
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`;
+export const HumansAndSceneContainer = styled.div`
   grid-area: 1 / 6 / 6 / 10;
-  width: 100%;
-  height: 100%;
-  background-color: gray;
-  img {
-    background-color: black;
-  }
+`;
+export const LeavesContainer = styled.div`
+  grid-area: 1 / 1 / 11 / 10;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`

@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { GlobalStyle } from './globalStyle';
-import { MainContainer, SpaceDown20 } from './layoutComponents';
+import { MainContainer, SpaceDown } from './layoutComponents';
 import Header from './header';
 import Passion from './passion';
-import Footer from './footer';
 import Projects from './projects';
+import Footer from './footer';
 
 const Layout = () => (
   <StaticQuery
@@ -24,10 +24,10 @@ const Layout = () => (
         <GlobalStyle />
         <MainContainer>
           <Header />
-          <SpaceDown20 />
+          <SpaceDown space='10vh' />
           <Passion />
           <Projects />
-          <SpaceDown20 />
+          <SpaceDown space='20vh' />
           <Footer />
         </MainContainer>
       </>

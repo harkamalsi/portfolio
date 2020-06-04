@@ -1,50 +1,64 @@
 import React from 'react';
 import {
   FooterContainer,
-  FormGridContainer,
-  GridContainer,
-  HumansContainer,
+  GridItemContainer,
+  FormContainer,
+  SocialMediaContainer,
+  HumansAndSceneContainer,
+  LeavesContainer,
 } from './layoutComponents';
 import { InputName, TextInput } from '../elements/inputfield';
 import { ButtonPrimary } from '../elements/button';
 import { TextArea } from '../elements/textarea';
+import HumansAndScene from '../assets/HumansAndScene.svg';
+import HangingLamp2 from '../assets/HangingLamp2.svg';
+import Leaves from '../assets/Leaves.svg';
+import Linkedin from '../assets/Linkedin.svg';
+import Github from '../assets/Github.svg';
 
 const Footer = () => (
   <FooterContainer>
+    <LeavesContainer>
+      <Leaves />
+    </LeavesContainer>
     <h1>Get In Touch</h1>
     <p>
       Looking for a developer, want to collaborate or just talk?
       <br />
       Feel free to reach out!
     </p>
-    <GridContainer>
-      <FormGridContainer gridArea='name'>
+    <FormContainer>
+      <GridItemContainer gridArea='name'>
         <InputName>Name</InputName>
         <TextInput></TextInput>
-      </FormGridContainer>
-      <FormGridContainer gridArea='email'>
+      </GridItemContainer>
+      <GridItemContainer gridArea='email'>
         <InputName>Email</InputName>
         <TextInput></TextInput>
-      </FormGridContainer>
-      <FormGridContainer gridArea='subject'>
+      </GridItemContainer>
+      <GridItemContainer gridArea='subject'>
         <InputName>Subject</InputName>
         <TextInput placeholder='Want to collaborate?'></TextInput>
-      </FormGridContainer>
-      <FormGridContainer
-        gridArea='message'
-        alignSelf='stretch'
-        style={{ height: '150%' }}
-      >
+      </GridItemContainer>
+      <GridItemContainer gridArea='message' alignSelf='stretch'>
         <InputName>Message</InputName>
         <TextArea rows='4' cols='50'></TextArea>
-      </FormGridContainer>
-      <FormGridContainer gridArea='submit' alignSelf='start'>
+      </GridItemContainer>
+      <GridItemContainer gridArea='submit' alignSelf='end'>
         <ButtonPrimary>Submit</ButtonPrimary>
-      </FormGridContainer>
-      <HumansContainer>
-        <img alt='Humans here' />
-      </HumansContainer>
-    </GridContainer>
+      </GridItemContainer>
+      <GridItemContainer gridArea='socialMedia' alignSelf='end'>
+        <SocialMediaContainer>
+          <Linkedin style={{ cursor: 'pointer' }} />
+          <Github style={{ cursor: 'pointer' }} />
+        </SocialMediaContainer>
+      </GridItemContainer>
+    </FormContainer>
+
+    <HumansAndSceneContainer>
+      <HumansAndScene />
+      <HangingLamp2 />
+    </HumansAndSceneContainer>
   </FooterContainer>
 );
 

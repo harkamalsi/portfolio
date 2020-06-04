@@ -20,5 +20,5 @@ export const TextInput = styled.input`
   border-radius: 4px;
   width: 100%;
   height: 50%;
-  padding: ;
+  padding: 10px;
 `;
