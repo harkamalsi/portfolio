@@ -16,6 +16,11 @@ export const ButtonPrimary = styled(Button)`
   background: #47535e;
   color: #ffffff;
   text-align: center;
+  transition: background 0.3s ease 0s;
+
+  &:hover {
+    background: #2f3676;
+  }
 `;
 
 export const ButtonSecondary = styled(Button)`
@@ -26,9 +31,17 @@ export const ButtonSecondary = styled(Button)`
   letter-spacing: 0.045em;
   padding: 0;
   border: 0;
+  border-bottom: 2px solid transparent;
+  width: 9.5%;
   background: none;
   color: #3b454f;
   text-align: start;
+
+  transition: border-bottom 0.3s ease 0s;
+  &:hover {
+    transition: border-bottom 0.3s ease 0s;
+    border-bottom-color: #47525e;
+  }
 `;
 
 export const ButtonTertiary = styled(Button)`
@@ -37,8 +50,10 @@ export const ButtonTertiary = styled(Button)`
   font-weight: 700;
   line-height: 24px;
   padding: 0;
-  border: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  width: 26%;
   background: none;
   text-align: start;
-  justify-self: stretch;
+  transition: border-bottom 0.3s ease 0s;
 `;

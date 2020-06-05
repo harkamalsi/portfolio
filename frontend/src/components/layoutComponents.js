@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ButtonTertiary } from '../elements/button';
 
 export const MainContainer = styled.div`
   margin: 0;
@@ -60,7 +61,14 @@ export const HeaderContainer = styled.div`
     font-weight: 400;
     letter-spacing: 0.03em;
     cursor: pointer;
-    color: #ffbe00;
+    color: #b36b41;
+
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease 0s;
+    &:hover {
+      transition: border-bottom 0.3s ease 0s;
+      border-bottom-color: #47525e;
+    }
   }
 `;
 export const HeaderSvgContainer = styled.div`
@@ -134,11 +142,12 @@ export const Project = styled.div`
   justify-self: ${(props) => props.justifySelf || 'center'};
   width: 520px;
   height: 500px;
-  background-color: 'gray';
 
   img {
     background-color: ${(props) => props.bgcolor || 'gray'};
     height: 300px;
+    display: block;
+    transition: transform 0.3s ease 0s;
   }
 
   h2 {
@@ -153,6 +162,18 @@ export const Project = styled.div`
     font-size: 18px;
     line-height: 28px;
     color: #696969;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.04);
+      transition: transform 0.3s ease 0s;
+    }
+
+    & ${ButtonTertiary} {
+      border-bottom-color: #47525e;
+      transition: border-bottom 0.3s ease 0s;
+    }
   }
 `;
 
@@ -205,6 +226,10 @@ export const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  &:hover {
+    fill: red;
+  }
 `;
 export const HumansAndSceneContainer = styled.div`
   grid-area: 1 / 6 / 6 / 10;

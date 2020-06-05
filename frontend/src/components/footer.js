@@ -11,7 +11,6 @@ import { InputName, TextInput } from '../elements/inputfield';
 import { ButtonPrimary } from '../elements/button';
 import { TextArea } from '../elements/textarea';
 import HumansAndScene from '../assets/HumansAndScene.svg';
-import HangingLamp2 from '../assets/HangingLamp2.svg';
 import Leaves from '../assets/Leaves.svg';
 import Linkedin from '../assets/Linkedin.svg';
 import Github from '../assets/Github.svg';
@@ -49,15 +48,14 @@ const Footer = () => (
       </GridItemContainer>
       <GridItemContainer gridArea='socialMedia' alignSelf='end'>
         <SocialMediaContainer>
-          <Linkedin style={{ cursor: 'pointer' }} />
-          <Github style={{ cursor: 'pointer' }} />
+          <Linkedin style={{ cursor: 'pointer' }} tabindex='0' />
+          <Github style={{ cursor: 'pointer' }} tabindex='0' />
         </SocialMediaContainer>
       </GridItemContainer>
     </FormContainer>
 
     <HumansAndSceneContainer>
       <HumansAndScene />
-      <HangingLamp2 />
     </HumansAndSceneContainer>
   </FooterContainer>
 );
