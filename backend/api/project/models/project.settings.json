@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "imgAlt": {
+      "type": "string",
+      "required": true
+    },
+    "justifySelf": {
+      "type": "string",
+      "required": true
+    },
+    "bgColor": {
+      "type": "string",
+      "required": true
+    },
+    "gridArea": {
+      "type": "string",
+      "required": true
+    },
+    "codeLink": {
+      "type": "string"
+    },
+    "hostingLink": {
+      "type": "string"
+    },
+    "otherLinks": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "stackExplanation": {
+      "type": "text"
+    },
+    "process": {
+      "type": "text"
+    },
+    "lessonsLearned": {
+      "type": "text"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "stack": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

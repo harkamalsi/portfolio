@@ -11,10 +11,22 @@ import Footer from './footer';
 const Layout = () => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+      query IndexQuery {
+        allStrapiProjects {
+          edges {
+            node {
+              id
+              title
+              imgAlt
+              description
+              justifySelf
+              bgColor
+              gridArea
+              cover {
+                id
+                publicURL
+              }
+            }
           }
         }
       }
@@ -27,7 +39,7 @@ const Layout = () => (
           <SpaceDown space='10vh' />
           <Passion />
           <SpaceDown space='10vh' />
-          <Projects />
+          <Projects data={data.allStrapiProjects.edges} />
           <SpaceDown space='20vh' />
           <Footer />
         </MainContainer>
