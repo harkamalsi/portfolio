@@ -9,6 +9,7 @@ export const MainContainer = styled.div`
   min-height: 100vh;
   color: #47535e;
   letter-spacing: 0.024em;
+  overflow: hidden;
 `;
 
 export const SpaceDown = styled.div`
@@ -119,6 +120,7 @@ export const ProjectsContainer = styled.div`
     font-size: 38px;
     line-height: 24px;
     font-family: Muli, sans-serif;
+    margin-bottom: 0;
   }
 
   .col {
@@ -126,14 +128,11 @@ export const ProjectsContainer = styled.div`
   }
 `;
 export const ProjectsGrid = styled.div`
+  padding-top: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   row-gap: 7vh;
-
-  /* For ProjectsContainer */
-  align-content: space-between;
-  justify-content: space-between;
 `;
 export const Project = styled.div`
   display: flex;
@@ -191,6 +190,7 @@ export const FooterContainer = styled.div`
     font-size: 38px;
     line-height: 24px;
     margin: 0;
+    z-index: 1;
   }
 
   p {
@@ -200,6 +200,7 @@ export const FooterContainer = styled.div`
     line-height: 24px;
     letter-spacing: 0.024em;
     margin: 0;
+    z-index: 1;
   }
 `;
 export const FormContainer = styled.div`
@@ -209,6 +210,7 @@ export const FormContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0 2em;
+  z-index: 1;
 `;
 const formGridAreaDict = {
   name: '1 / 1 / 2 / 3',
@@ -240,6 +242,7 @@ export const HumansAndSceneContainer = styled.div`
   grid-area: 1 / 6 / 6 / 10;
 `;
 export const LeavesContainer = styled.div`
+  z-index: 0;
   grid-area: 1 / 1 / 11 / 10;
   overflow: hidden;
 `;

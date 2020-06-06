@@ -26,6 +26,7 @@ const Footer = () => (
       <br />
       Feel free to reach out!
     </p>
+
     <FormContainer>
       <GridItemContainer gridArea='name'>
         <InputName>Name</InputName>
@@ -66,7 +67,11 @@ const Footer = () => (
       </GridItemContainer>
     </FormContainer>
 
-    <HumansAndSceneContainer>
+    <HumansAndSceneContainer
+      data-sal='slide-left'
+      data-sal-duration='1600'
+      data-sal-easing='ease'
+    >
       <HumansAndScene />
     </HumansAndSceneContainer>
   </FooterContainer>

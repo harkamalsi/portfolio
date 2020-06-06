@@ -8,7 +8,12 @@ import PassionScene from '../assets/MyPassionScene.svg';
 
 const Passion = () => (
   <PassionContainer>
-    <PassionSceneContainer>
+    <PassionSceneContainer
+      data-sal='slide-down'
+      data-sal-duration='1200'
+      data-sal-easing='ease-out-back'
+      data-sal-delay='500'
+    >
       <PassionScene />
     </PassionSceneContainer>
     <PassionText>

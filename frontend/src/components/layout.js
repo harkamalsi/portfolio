@@ -26,6 +26,7 @@ const Layout = () => (
           <Header />
           <SpaceDown space='10vh' />
           <Passion />
+          <SpaceDown space='10vh' />
           <Projects />
           <SpaceDown space='20vh' />
           <Footer />

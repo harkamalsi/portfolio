@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter w/ styled-components`,
-    description: `Gatsby starter using styled-components`,
-    author: `@blakenoll`,
+    title: `Harkamal`,
+    description: `Harkamal Portfolio`,
+    author: `@Harkamal`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,11 +41,36 @@ module.exports = {
       options: {
         fonts: [
           `Muli\:300,400,500,600,700,800`,
-          `inter`,
+          `Inter`,
           `DM Serif Display`,
           // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-        display: 'swap',
+        display: 'none',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Muli`,
+            variants: [`300`, `400`, `500`, `600`, `700`, `800`],
+          },
+          {
+            family: `Inter`,
+          },
+          {
+            family: `DM Serif Display`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.3, // Percentage of an element's area that needs to be visible to launch animation
+        once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
