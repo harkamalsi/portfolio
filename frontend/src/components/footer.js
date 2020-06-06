@@ -48,8 +48,20 @@ const Footer = () => (
       </GridItemContainer>
       <GridItemContainer gridArea='socialMedia' alignSelf='end'>
         <SocialMediaContainer>
-          <Linkedin style={{ cursor: 'pointer' }} tabindex='0' />
-          <Github style={{ cursor: 'pointer' }} tabindex='0' />
+          <a
+            href='https://www.linkedin.com/in/harkamaljit/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Linkedin style={{ cursor: 'pointer' }} tabindex='0' />
+          </a>
+          <a
+            href='https://github.com/harkamalsi/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <Github style={{ cursor: 'pointer' }} tabindex='0' />
+          </a>
         </SocialMediaContainer>
       </GridItemContainer>
     </FormContainer>

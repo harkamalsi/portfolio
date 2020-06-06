@@ -227,8 +227,13 @@ export const SocialMediaContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
 
-  &:hover {
-    fill: red;
+  svg {
+    fill: #9a9a9a;
+    transition: 0.3s ease 0s;
+
+    &:hover {
+      fill: #89c5cc;
+    }
   }
 `;
 export const HumansAndSceneContainer = styled.div`
