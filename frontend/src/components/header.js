@@ -12,7 +12,13 @@ const Header = () => (
       <Link to='/'>Harkamal</Link>
     </h1>
     <h2>Student & Full Stack Developer</h2>
-    <h3>Admin</h3>
+    <a
+      href='http://localhost:1337/admin/auth/login'
+      rel='noreferrer'
+      target='_blank'
+    >
+      <h3>Admin</h3>
+    </a>
   </HeaderContainer>
 );
 
