@@ -9,7 +9,7 @@ export const InputName = styled.h3`
   margin-bottom: 5px;
 `;
 
-export const TextInput = styled.input`
+export const Input = styled.input`
   font-family: Inter, -apple-system, sans-serif;
   font-size: 18;
   line-height: 24px;

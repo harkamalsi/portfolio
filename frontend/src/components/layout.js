@@ -11,7 +11,7 @@ import Footer from './footer';
 const Layout = () => (
   <StaticQuery
     query={graphql`
-      query IndexQuery {
+      query passionsAndProjects {
         allStrapiProjects {
           edges {
             node {
@@ -22,10 +22,24 @@ const Layout = () => (
               justifySelf
               bgColor
               gridArea
+              codeLink
               cover {
-                id
                 publicURL
+                childImageSharp {
+                  fluid(quality: 100, maxWidth: 1920) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
               }
+            }
+          }
+        }
+
+        allStrapiPassions {
+          edges {
+            node {
+              id
+              passion_text
             }
           }
         }
@@ -37,7 +51,7 @@ const Layout = () => (
         <MainContainer>
           <Header />
           <SpaceDown space='10vh' />
-          <Passion />
+          <Passion data={data.allStrapiPassions.edges} />
           <SpaceDown space='10vh' />
           <Projects data={data.allStrapiProjects.edges} />
           <SpaceDown space='20vh' />

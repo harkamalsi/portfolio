@@ -15,12 +15,13 @@ module.exports = {
     author: `@Harkamal`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`projects`],
+        contentTypes: [`projects`, `passions`],
         //If using single types place them in this array.
         // singleTypes: [`home-page`, `contact`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
@@ -71,23 +72,6 @@ module.exports = {
           // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
         display: 'none',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Muli`,
-            variants: [`300`, `400`, `500`, `600`, `700`, `800`],
-          },
-          {
-            family: `Inter`,
-          },
-          {
-            family: `DM Serif Display`,
-          },
-        ],
       },
     },
     {

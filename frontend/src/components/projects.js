@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import { ProjectsContainer, ProjectsGrid, Project } from './layoutComponents';
 import { ButtonTertiary, ButtonSecondary } from '../elements/button';
 
@@ -50,24 +50,36 @@ const Projects = ({ data }) => (
       data-sal-duration='700'
       data-sal-easing='ease-out-quad'
     >
-      {console.log(data)}
       {data.map(
         ({
-          node: { justifySelf, bgColor, gridArea, imgAlt, title, description },
+          node: {
+            justifySelf,
+            bgColor,
+            gridArea,
+            imgAlt,
+            title,
+            description,
+            cover, //image
+            codeLink,
+          },
         }) => (
           <Project
             justifySelf={justifySelf}
             bgcolor={bgColor}
             gridArea={gridArea}
           >
-            <Link>
-              <img alt={imgAlt}></img>
+            <a href={codeLink} rel='noreferrer' target='_blank'>
+              <BackgroundImage
+                className='project-img'
+                alt={imgAlt}
+                fluid={cover.childImageSharp.fluid}
+              ></BackgroundImage>
               <h2>{title}</h2>
               <p>{description}</p>
               <ButtonTertiary>
                 VIEW PROJECT <span style={{ fontSize: '20px' }}>›</span>
               </ButtonTertiary>
-            </Link>
+            </a>
           </Project>
         )
       )}

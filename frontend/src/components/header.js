@@ -1,5 +1,5 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 import HeaderSvg from '../assets/Waihou.svg';
 import { HeaderContainer, HeaderSvgContainer } from './layoutComponents';
 

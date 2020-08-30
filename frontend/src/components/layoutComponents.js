@@ -142,8 +142,9 @@ export const Project = styled.div`
   width: 520px;
   height: 500px;
 
-  img {
+  .project-img {
     background-color: ${(props) => props.bgcolor || 'gray'};
+    margin-bottom: 30px;
     height: 300px;
     display: block;
     transition: transform 0.3s ease 0s;
@@ -164,7 +165,7 @@ export const Project = styled.div`
   }
 
   &:hover {
-    img {
+    .project-img {
       transform: scale(1.04);
       transition: transform 0.3s ease 0s;
     }
@@ -203,7 +204,7 @@ export const FooterContainer = styled.div`
     z-index: 1;
   }
 `;
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   grid-area: 4 / 2 / 9 / 10;
 
   display: grid;
