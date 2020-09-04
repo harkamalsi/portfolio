@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "passions",
+  "info": {
+    "name": "Passion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "passion_text": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 130
+    }
+  }
+}

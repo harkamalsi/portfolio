@@ -2,7 +2,7 @@
   "name": "backend",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Harkamal portfolio",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -11,12 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@sendgrid/mail": "^7.1.1",
     "dotenv": "^8.2.0",
     "node-mailjet": "^3.3.1",
-    "nodemailer": "^6.4.8",
-    "nodemailer-sendgrid": "^1.0.3",
-    "nodemailer-sendgrid-transport": "^0.2.0",
     "strapi": "3.0.1",
     "strapi-admin": "3.0.1",
     "strapi-connector-mongoose": "3.0.1",
@@ -26,11 +22,10 @@
     "strapi-plugin-graphql": "^3.0.1",
     "strapi-plugin-upload": "3.0.1",
     "strapi-plugin-users-permissions": "3.0.1",
-    "strapi-provider-email-sendgrid": "^3.0.1",
     "strapi-utils": "3.0.1"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Harkamal"
   },
   "strapi": {
     "uuid": "9158f055-bf6c-4a50-876d-9b03fe5e764e"

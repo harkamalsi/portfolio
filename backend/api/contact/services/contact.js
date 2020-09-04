@@ -39,11 +39,6 @@ module.exports = {
           },
         ],
       })
-      .then((result) => {
-        console.log(result.body);
-      })
-      .catch((err) => {
-        console.log(err.statusCode);
-      });
+      .catch((err) => {});
   },
 };

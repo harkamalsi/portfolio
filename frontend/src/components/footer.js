@@ -47,7 +47,6 @@ const Footer = () => {
     e.preventDefault();
     postContact(formUrl, { name, email, subject, message })
       .then((res) => {
-        console.log(res);
         if (res) {
           /* return <AniLink paintDrip to='page-2'></AniLink>; */
           setMessageSent(true);
@@ -111,7 +110,11 @@ const Footer = () => {
           ></TextArea>
         </GridItemContainer>
         <GridItemContainer gridArea='submit' alignSelf='end'>
-          <ButtonPrimary>Submit</ButtonPrimary>
+          {messageSent ? (
+            <ButtonPrimary disabled>Sent!</ButtonPrimary>
+          ) : (
+            <ButtonPrimary>Submit</ButtonPrimary>
+          )}
         </GridItemContainer>
         <GridItemContainer gridArea='socialMedia' alignSelf='end'>
           <SocialMediaContainer>

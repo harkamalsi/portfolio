@@ -42,6 +42,13 @@ const ProjectsData = [
   },
 ];
 
+const mapGridAreaToJustifySelf = (gridArea = '') => {
+  if (gridArea === 'project1' || gridArea === 'project3') {
+    return 'start';
+  }
+  return 'end';
+};
+
 const Projects = ({ data }) => (
   <ProjectsContainer>
     <h1>What I've been working on</h1>
@@ -53,7 +60,6 @@ const Projects = ({ data }) => (
       {data.map(
         ({
           node: {
-            justifySelf,
             bgColor,
             gridArea,
             imgAlt,
@@ -64,7 +70,7 @@ const Projects = ({ data }) => (
           },
         }) => (
           <Project
-            justifySelf={justifySelf}
+            justifySelf={mapGridAreaToJustifySelf(gridArea)}
             bgcolor={bgColor}
             gridArea={gridArea}
           >

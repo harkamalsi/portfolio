@@ -21,6 +21,11 @@ export const ButtonPrimary = styled(Button)`
   &:hover {
     background: #2f3676;
   }
+
+  &:disabled {
+    background: #5bcf76;
+    pointer-events: none;
+  }
 `;
 
 export const ButtonSecondary = styled(Button)`

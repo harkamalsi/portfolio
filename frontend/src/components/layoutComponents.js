@@ -88,6 +88,7 @@ export const PassionContainer = styled.div`
   height: 75vh;
 `;
 export const PassionSceneContainer = styled.div`
+  margin-left: 70px;
   grid-area: 2 / 1 / 6 / 6;
 `;
 export const PassionText = styled.div`
@@ -132,13 +133,17 @@ export const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 7vh;
+  grid-template-areas:
+    'project1 project2'
+    'project3 project4';
+  row-gap: 17vh;
 `;
 export const Project = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-self: ${(props) => props.justifySelf || 'center'};
+  grid-area: ${(props) => props.gridArea};
   width: 520px;
   height: 500px;
 

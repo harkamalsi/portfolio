@@ -21,10 +21,6 @@
       "type": "string",
       "required": true
     },
-    "justifySelf": {
-      "type": "string",
-      "required": true
-    },
     "bgColor": {
       "type": "string",
       "required": true
