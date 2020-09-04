@@ -18,7 +18,7 @@ module.exports = {
         Messages: [
           {
             From: {
-              Email: process.env.PERSONAL_Gmail,
+              Email: process.env.PERSONAL_GMAIL,
               Name: "From Portfolio",
             },
             To: [
