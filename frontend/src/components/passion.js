@@ -10,7 +10,7 @@ const default_passion_text =
   'I love to solve problems and I’m interessted in connecting front-end, back-end, artificial intelligence and human-machine interaction together';
 
 const Passion = ({ data }) => {
-  const cms_passion_text = data[0].node.passion_text;
+  let cms_passion_text = data[0].node.passion_text;
 
   if (cms_passion_text === undefined) cms_passion_text = default_passion_text;
 

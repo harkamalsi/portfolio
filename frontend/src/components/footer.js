@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import {
   FooterContainer,
   GridItemContainer,
