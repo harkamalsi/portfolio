@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import { GlobalStyle } from './globalStyle';
-import { MainContainer, SpaceDown } from './layoutComponents';
-import Header from './header';
-import Passion from './passion';
-import Projects from './projects';
-import Footer from './footer';
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import { GlobalStyle } from "./globalStyle";
+import { MainContainer, SpaceDown } from "./layoutComponents";
+import Header from "./header";
+import Passion from "./passion";
+import Projects from "./projects";
+import Footer from "./footer";
 
 const Layout = () => (
   <StaticQuery
@@ -45,16 +45,16 @@ const Layout = () => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <>
         <GlobalStyle />
         <MainContainer>
           <Header />
-          <SpaceDown space='10vh' />
+          <SpaceDown space="10vh" />
           <Passion data={data.allStrapiPassions.edges} />
-          <SpaceDown space='10vh' />
+          <SpaceDown space="10vh" />
           <Projects data={data.allStrapiProjects.edges} />
-          <SpaceDown space='20vh' />
+          <SpaceDown space="20vh" />
           <Footer />
         </MainContainer>
       </>
@@ -63,7 +63,7 @@ const Layout = () => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

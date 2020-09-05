@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "cd backend && npm run start",
+    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run start\"",
     "start-concurrently": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run build && npm run serve\"",
     "build-concurrently": "concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\"",
+    "serve-gatsby": "npm run build-gatsby && cd frontend && npm run serve",
     "build-gatsby": "cd frontend && npm run build",
     "start-strapi": "cd backend && npm run start",
     "develop-strapi": "cd backend && npm run develop"

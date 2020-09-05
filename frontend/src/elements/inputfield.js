@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const InputName = styled.h3`
   font-family: Inter, -apple-system, sans-serif;

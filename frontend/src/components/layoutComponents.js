@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { ButtonTertiary } from '../elements/button';
+import styled from "styled-components";
+import { ButtonTertiary } from "../elements/button";
 
 export const MainContainer = styled.div`
   margin: 0;
@@ -13,7 +13,7 @@ export const MainContainer = styled.div`
 `;
 
 export const SpaceDown = styled.div`
-  padding-bottom: ${(props) => props.space};
+  padding-bottom: ${props => props.space};
 `;
 
 export const HeaderContainer = styled.div`
@@ -134,21 +134,21 @@ export const ProjectsGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'project1 project2'
-    'project3 project4';
+    "project1 project2"
+    "project3 project4";
   row-gap: 17vh;
 `;
 export const Project = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-self: ${(props) => props.justifySelf || 'center'};
-  grid-area: ${(props) => props.gridArea};
+  justify-self: ${props => props.justifySelf || "center"};
+  grid-area: ${props => props.gridArea};
   width: 520px;
   height: 500px;
 
   .project-img {
-    background-color: ${(props) => props.bgcolor || 'gray'};
+    background-color: ${props => props.bgcolor || "gray"};
     margin-bottom: 30px;
     height: 300px;
     display: block;
@@ -219,16 +219,16 @@ export const FormContainer = styled.form`
   z-index: 1;
 `;
 const formGridAreaDict = {
-  name: '1 / 1 / 2 / 3',
-  email: '1 / 3 / 2 / 5',
-  subject: '2 / 1 / 3 / 5',
-  message: '3 / 1 / 5 / 5',
-  submit: '5 / 1 / 6 / 2',
-  socialMedia: '5 / 4 / 6 / 5',
+  name: "1 / 1 / 2 / 3",
+  email: "1 / 3 / 2 / 5",
+  subject: "2 / 1 / 3 / 5",
+  message: "3 / 1 / 5 / 5",
+  submit: "5 / 1 / 6 / 2",
+  socialMedia: "5 / 4 / 6 / 5"
 };
 export const GridItemContainer = styled.div`
-  grid-area: ${(props) => formGridAreaDict[props.gridArea] || 'auto'};
-  align-self: ${(props) => props.alignSelf || 'auto'};
+  grid-area: ${props => formGridAreaDict[props.gridArea] || "auto"};
+  align-self: ${props => props.alignSelf || "auto"};
 `;
 export const SocialMediaContainer = styled.div`
   display: flex;
@@ -261,24 +261,24 @@ export const Container = styled.div`
 `;
 export const Row = styled.div`
   display: flex;
-  flex: ${(props) => (props.flex ? props.flex : 'initial')};
+  flex: ${props => (props.flex ? props.flex : "initial")};
   flex-direction: row;
-  flex-wrap: ${(props) => (props.wrap ? props.wrap : 'initial')};
-  align-content: ${(props) =>
-    props.alignContent ? props.alignContent : 'initial'};
-  justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : 'initial'};
+  flex-wrap: ${props => (props.wrap ? props.wrap : "initial")};
+  align-content: ${props =>
+    props.alignContent ? props.alignContent : "initial"};
+  justify-content: ${props =>
+    props.justifyContent ? props.justifyContent : "initial"};
   @media screen and (max-width: 768px) {
-    flex-direction: ${(props) => (props.mobile ? 'column' : 'row')};
+    flex-direction: ${props => (props.mobile ? "column" : "row")};
   }
 `;
 export const Column = styled.div`
-  flex: ${(props) => (props.flex ? props.flex : 'initial')};
+  flex: ${props => (props.flex ? props.flex : "initial")};
   flex-direction: column;
-  align-content: ${(props) =>
-    props.alignContent ? props.alignContent : 'initial'};
-  justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : 'initial'};
-  margin: ${(props) => (props.margin ? props.margin : '0')};
-  width: ${(props) => (props.width ? props.width : 'auto')};
+  align-content: ${props =>
+    props.alignContent ? props.alignContent : "initial"};
+  justify-content: ${props =>
+    props.justifyContent ? props.justifyContent : "initial"};
+  margin: ${props => (props.margin ? props.margin : "0")};
+  width: ${props => (props.width ? props.width : "auto")};
 `;

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
   PassionContainer,
   PassionSceneContainer,
-  PassionText,
-} from './layoutComponents';
-import PassionScene from '../assets/MyPassionScene.svg';
+  PassionText
+} from "./layoutComponents";
+import PassionScene from "../assets/MyPassionScene.svg";
 
 const default_passion_text =
-  'I love to solve problems and I’m interessted in connecting front-end, back-end, artificial intelligence and human-machine interaction together';
+  "I love to solve problems and I’m interessted in connecting front-end, back-end, artificial intelligence and human-machine interaction together";
 
 const Passion = ({ data }) => {
   let cms_passion_text = data[0].node.passion_text;
@@ -17,10 +17,10 @@ const Passion = ({ data }) => {
   return (
     <PassionContainer>
       <PassionSceneContainer
-        data-sal='slide-down'
-        data-sal-duration='1200'
-        data-sal-easing='ease-out-back'
-        data-sal-delay='500'
+        data-sal="slide-down"
+        data-sal-duration="1200"
+        data-sal-easing="ease-out-back"
+        data-sal-delay="500"
       >
         <PassionScene />
       </PassionSceneContainer>

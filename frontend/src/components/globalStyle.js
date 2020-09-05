@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Karla|Lato');
@@ -644,4 +644,4 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 100%;
     }
   }
-`
+`;
