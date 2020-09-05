@@ -1,13 +1,39 @@
 {
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Harkamal portfolio",
   "scripts": {
-    "start": "cd backend && npm run start",
-    "start-concurrently": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run build && npm run serve\"",
-    "build-concurrently": "concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\"",
-    "build-gatsby": "cd frontend && npm run build",
-    "start-strapi": "cd backend && npm run start",
-    "develop-strapi": "cd backend && npm run develop"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "concurrently": "^5.3.0"
-  }
+    "dotenv": "^8.2.0",
+    "node-mailjet": "^3.3.1",
+    "strapi": "^3.1.4",
+    "strapi-admin": "^3.1.4",
+    "strapi-connector-mongoose": "^3.1.4",
+    "strapi-plugin-content-manager": "^3.1.4",
+    "strapi-plugin-content-type-builder": "^3.1.4",
+    "strapi-plugin-email": "^3.1.4",
+    "strapi-plugin-graphql": "^3.1.4",
+    "strapi-plugin-upload": "^3.1.4",
+    "strapi-plugin-users-permissions": "^3.1.4",
+    "strapi-provider-upload-cloudinary": "^3.1.4",
+    "strapi-utils": "^3.1.4"
+  },
+  "author": {
+    "name": "Harkamal"
+  },
+  "strapi": {
+    "uuid": "9158f055-bf6c-4a50-876d-9b03fe5e764e"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
