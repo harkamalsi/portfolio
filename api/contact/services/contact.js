@@ -19,12 +19,12 @@ module.exports = {
           {
             From: {
               Email: process.env.PERSONAL_GMAIL,
-              Name: "From Portfolio",
+              Name: "From Portfolio"
             },
             To: [
               {
-                Email: process.env.PERSONAL_EMAIL,
-              },
+                Email: process.env.PERSONAL_EMAIL
+              }
             ],
             Subject: subject,
             TextPart: `${userName} /--/ ${userEmail} /--/ ${message}`,
@@ -35,10 +35,13 @@ module.exports = {
               "<br>" +
               `<h3>Subject:</h3> ${subject}` +
               "<br>" +
-              `<h3>Message:</h3> ${message}`,
-          },
-        ],
+              `<h3>Message:</h3> ${message}`
+          }
+        ]
       })
-      .catch((err) => {});
-  },
+      .then(res => console.log(res))
+      .catch(err => {
+        console.log(err);
+      });
+  }
 };
